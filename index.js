@@ -90,7 +90,7 @@ var finances = [
 // calculates total no. of months.
 var totalMonth= finances.length;
 
-//calculate Net Total.
+//calculates Net Total.
 var netTotal=0;
 for(i=0;i<finances.length;i++)
 {
