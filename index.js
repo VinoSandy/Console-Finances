@@ -116,10 +116,27 @@ var averageChange = total / (finances.length - 1);
 //Round the number to the nearest 100th value.
   averageChange = Math.round(averageChange/100)*100;
 
+ 
+ var maxDate = finances[0][0];
+var maxValue = finances[0][1];
 
-  
+for (var k = 1; k< finances.length; k++) {
+  var currentDate = finances[k][0];
+  var currentProfit = finances[k][1];
+
+  if (currentProfit > maxValue) {
+    maxDate = currentDate;
+    maxValue = currentProfit;
+  }
+}
+
+//var formattedOutput = `${maxDate} ($${maxValue})`;
+console.log("Greatest value in the array:"+ maxDate, "$"+maxValue);
+
+
 console.log(`Financial Analysis \n--------------------- \n`);
  
 console.log("Total Months: "  +totalMonth);
 console.log("Net Total:$" +netTotal);
 console.log("Average Change:" +averageChange);
+
