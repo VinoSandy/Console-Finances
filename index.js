@@ -92,14 +92,30 @@ var totalMonth= finances.length;
 
 //calculates Net Total.
 var netTotal=0;
+
 for(i=0;i<finances.length;i++)
 {
    netTotal+=finances[i][1];
 
 }
 
+//calculates average of changes.
 
+var total = 0;
+
+for (var j = 1; j < finances.length; j++) {
+  var currentMonth = finances[j][1];
+  var previousMonth = finances[j- 1][1];
+  var change = currentMonth - previousMonth;
+
+  total += change;
+}
+
+var averageChange = total / (finances.length - 1);
+    averageChange = Math.round(averageChange/100)*100;
+    
 console.log(`Financial Analysis \n--------------------- \n`);
  
 console.log("Total Months: "  +totalMonth);
-console.log("Net Total: " +netTotal);
+console.log("Net Total:$" +netTotal);
+console.log("Average Change:" +averageChange);
