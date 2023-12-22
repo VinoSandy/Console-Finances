@@ -130,13 +130,30 @@ for (var k = 1; k< finances.length; k++) {
   }
 }
 
-//var formattedOutput = `${maxDate} ($${maxValue})`;
-console.log("Greatest value in the array:"+ maxDate, "$"+maxValue);
+//Min Value
 
+var minDate=finances[0][0];
+var minValue=finances[0][1];
+
+for(var x=1; x<finances.length; x++)
+{
+  var currentPeriod=finances[x][0];
+  var currentLoss=finances[x][1];
+
+  if(currentLoss<minValue)
+  {
+    minDate=currentPeriod;
+    minValue=currentLoss;
+  }
+
+}
 
 console.log(`Financial Analysis \n--------------------- \n`);
  
 console.log("Total Months: "  +totalMonth);
 console.log("Net Total:$" +netTotal);
 console.log("Average Change:" +averageChange);
+console.log("Greatest value in the array:"+ maxDate, "$"+maxValue);
+console.log("Greatest Decrease in the array:"+ minDate, "$"+minValue);
+
 
