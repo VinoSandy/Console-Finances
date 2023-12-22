@@ -112,8 +112,12 @@ for (var j = 1; j < finances.length; j++) {
 }
 
 var averageChange = total / (finances.length - 1);
-    averageChange = Math.round(averageChange/100)*100;
-    
+
+//Round the number to the nearest 100th value.
+  averageChange = Math.round(averageChange/100)*100;
+
+
+  
 console.log(`Financial Analysis \n--------------------- \n`);
  
 console.log("Total Months: "  +totalMonth);
