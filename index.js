@@ -151,7 +151,6 @@ for(var x=1; x<finances.length; x++)
 //Displaying the Result in Console
 
 console.log(`Financial Analysis \n--------------------- \n`);
- 
 console.log("Total Months: "  +totalMonth);
 console.log("Total:$" +netTotal);
 console.log("Average Change:" +averageChange);
