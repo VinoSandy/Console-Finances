@@ -116,7 +116,7 @@ var averageChange = total / (finances.length - 1);
 //Round the number to the nearest 100th value.
   averageChange = Math.round(averageChange/100)*100;
 
- 
+ //Calculating the greatest increase in Profit/Losses  
  var maxDate = finances[0][0];
 var maxValue = finances[0][1];
 
@@ -130,7 +130,7 @@ for (var k = 1; k< finances.length; k++) {
   }
 }
 
-//Min Value
+//Calculating the greatest decrease in Profit/Losses
 
 var minDate=finances[0][0];
 var minValue=finances[0][1];
@@ -148,12 +148,14 @@ for(var x=1; x<finances.length; x++)
 
 }
 
+//Displaying the Result in Console
+
 console.log(`Financial Analysis \n--------------------- \n`);
  
 console.log("Total Months: "  +totalMonth);
-console.log("Net Total:$" +netTotal);
+console.log("Total:$" +netTotal);
 console.log("Average Change:" +averageChange);
-console.log("Greatest value in the array:"+ maxDate, "$"+maxValue);
-console.log("Greatest Decrease in the array:"+ minDate, "$"+minValue);
+console.log("Greatest Increase in Profits/Losses:"+ maxDate, "$"+maxValue);
+console.log("Greatest Decrease in Profits/Losses:"+ minDate, "$"+minValue);
 
 
